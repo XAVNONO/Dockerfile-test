@@ -19,7 +19,7 @@ RUN     apt-get -y update
 RUN     apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # installing kubectl
-#RUN     apt-get install -y ca-certificates curl
+RUN     apt-get install -y ca-certificates curl
 RUN     curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 RUN     echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
 
